@@ -15,7 +15,7 @@ def add_video():
     
     # Валидация URL
     if not ('youtube.com' in youtube_url or 'youtu.be' in youtube_url):
-        return "Неверная YouTube ссылка!", 400
+        return "Incorrect YouTube URL!", 400
     
     # Добавление в Firestore
     doc_ref = db.collection('videos').document()
