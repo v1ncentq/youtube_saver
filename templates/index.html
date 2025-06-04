@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add video</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add YouTube video</h1>
+        <form action="/add" method="POST">
+            <label>Title:</label>
+            <input type="text" name="custom_title" required>
+            
+            <label>YouTube URL:</label>
+            <input type="url" name="youtube_url" placeholder="https://www.youtube.com/watch?v=..." required>
+            
+            <button type="submit">Click to Save</button>
+        </form>
+    </div>
+</body>
+</html>

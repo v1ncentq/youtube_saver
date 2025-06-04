@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saved Videos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>My Videos</h1>
+        <a href="/">Add new</a>
+        
+        <ul class="video-list">
+            {% for video in videos %}
+            <li>
+                <a href="{{ video.youtube_url }}" target="_blank">
+                    {{ video.custom_title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
